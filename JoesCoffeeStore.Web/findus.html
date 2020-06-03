@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Joe's Coffee Store! | Find Us</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/Layout.css" type="text/css" />
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="scripts/geopositioning.js"></script>
+</head>
+<body>
+    <header>
+        <div class="d-f mt-4">
+            <div class="logodiv"><a class="headerlogo" href="index.html"><img src="images/logo.png" /></a></div>
+            <h1 id="headername" class="pry-color-a d-ib p3">Joe's Coffee Store</h1>
+        </div>
+        <input type="search" id="searchbox" placeholder="Search our store" class="p2 mt-4"/>
+    </header>
+
+    <nav class="backgroundgradient my-3">
+        <ul class="d-f p2 w-100">
+            <li><a class="navlink white-color active" href="index.html">Home</a></li>
+            <li><a class="navlink white-color" href="blog.html">Blog</a></li>
+            <li><a class="navlink white-color" href="coffee.html">Our coffees</a></li>
+            <li><a class="navlink white-color" href="accessories.html">Accessories</a></li>
+            <li><a class="navlink white-color" href="Gifts.html">Gifts</a></li>
+            <li><a class="navlink white-color" href="findus.html">Find us</a></li>
+            <li><a class="navlink white-color" href="checkout.html">Checkout</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="imagediv" class="d-f jc-sb">
+            <img src="images/coffeeheader.jpg" id="welcomeimage" alt="Picture of coffee beans and a white cup"/>
+            <img src="images/cotm.jpg" id="coffeeofthemonth" alt="Our coffee of the month is the ..."/>   
+        </section>
+        <section class="maptostore">
+            <header class="blockheader"><span>Come to our real-life store!</span></header>
+        
+            <div id="map"></div>
+            <div id="driving-directions"></div>
+
+        </section>
+    </main>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", createDrivingDirectionsMap, false);
+    </script>
+</body>
+</html>

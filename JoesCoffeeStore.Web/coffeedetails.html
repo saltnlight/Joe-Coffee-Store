@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Joe's Coffee Store! | A Taste of Our Coffee</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/Layout.css" type="text/css" />
+    <script src="scripts/videoplayer.js"></script>
+    <script src="scripts/canvasChart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="d-f mt-4">
+            <div class="logodiv"><a class="headerlogo" href="index.html"><img src="images/logo.png" /></a></div>
+            <h1 id="headername" class="pry-color-a d-ib p3">Joe's Coffee Store</h1>
+        </div>
+        <input type="search" id="searchbox" placeholder="Search our store" class="p2 mt-4"/>
+    </header>
+
+    <nav class="backgroundgradient my-3">
+        <ul class="d-f p2 w-100">
+            <li><a class="navlink white-color active" href="index.html">Home</a></li>
+            <li><a class="navlink white-color" href="blog.html">Blog</a></li>
+            <li><a class="navlink white-color" href="coffee.html">Our coffees</a></li>
+            <li><a class="navlink white-color" href="accessories.html">Accessories</a></li>
+            <li><a class="navlink white-color" href="Gifts.html">Gifts</a></li>
+            <li><a class="navlink white-color" href="findus.html">Find us</a></li>
+            <li><a class="navlink white-color" href="checkout.html">Checkout</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="imagediv" class="d-f jc-sb">
+            <img src="images/coffeeheader.jpg" id="welcomeimage" alt="Picture of coffee beans and a white cup"/>
+            <img src="images/cotm.jpg" id="coffeeofthemonth" alt="Our coffee of the month is the ..."/>   
+        </section>
+    </main>
+
+    <br /><br /><br />
+    <section class="coffeedetails my-4">
+        <h2 class="blockheader text-center">Why People Love <span class="pry-color">Our Coffee</span></h2>
+    
+        <div class="productarticlecontent">
+            <p class="productarticledescription card med-text p4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut tortor non ante vehicula vehicula sed at enim. Suspendisse a odio odio. Vestibulum ac lorem nec ligula semper fermentum eu semper massa. Quisque convallis id sapien at varius. Praesent sed rhoncus ex, eget fringilla enim. Maecenas varius quam vitae ipsum sagittis sagittis. Mauris purus nunc, finibus sit amet finibus quis, posuere ut velit. Mauris consectetur nunc nec ornare scelerisque.</p> 
+
+            <p class="productarticledescription card med-text">Et maximus nunc. Suspendisse nec placerat ex. Sed ut metus bibendum, pretium quam id, viverra ex. Ut rutrum lacus urna, vitae suscipit lorem eleifend ut. Nunc a risus tincidunt, blandit odio sed, ullamcorper nisi. Mauris ultrices id orci sed rhoncus. Vivamus ut velit urna. Vestibulum faucibus ultricies risus, ut rhoncus odio mollis non.Suspendisse varius bibendum suscipit. Sed metus tellus, accumsan vitae sollicitudin suscipit, vestibulum eget eros. Ut lacinia eleifend nisi, ultrices consectetur nulla facilisis vitae. Curabitur accumsan non ante accumsan gravida.</p>
+
+            <p class="productarticledescription card med-text">Maecenas ornare magna non lacinia sollicitudin. Phasellus tincidunt dolor at imperdiet blandit. In hac habitasse platea dictumst. Duis nec magna facilisis, mattis enim posuere, pretium ligula. Aliquam eu accumsan ante, et porta erat. Suspendisse potenti. Donec lobortis risus quis ligula bibendum cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla efficitur volutpat tempus. Suspendisse faucibus nec ex at maximus. Cras non libero ut ipsum interdum porta. Vivamus condimentum, nibh at porttitor placerat, metus nisl cursus orci, tempor maximus est dui bibendum ex. </p>
+        </div>
+    </section>
+
+    <br /><br /><br />
+    <section >
+        <div class="videoplayerdiv">
+            <video class="coffeevideoplayer" id="videoplayer"><!--controls autoplay loop muted-->  <!-- poster="Images/logo.png"  width="320" height="240" -->
+                <source src="video/movie.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+                <source src="video/movie.ogg" type='video/ogg; codecs="theora, vorbis"' />
+                Sadly your browser has no support for video…
+            </video>
+
+            <div id="controls" class="mt-2">
+                <div id="errorDiv" style="color:Red;"></div> 
+                <button class="px-1"  id="slowerButton">Slower</button>
+                <button class="px-1" id="backButton" >&#x21BB</button>
+                <button class="px-1" id="playButton" >Play</button>
+                <button class="px-1" id="forwardButton" >&#x21BA</button>
+                <button class="px-1" id="fasterButton" >Faster</button>
+                <button class="px-1" id="muteButton" >Mute</button>
+                <br /><br /><br />
+            </div>
+        </div>
+    </section>
+
+    <section id="salesCanvasGraph">
+
+        <canvas id="barChart" height="800" width="650">
+           Sorry, your browser doesn't support canvas, therefore you can't see this chart! Upgrade to a new and better browser!
+        </canvas>
+
+    </section>
+
+
+    <section id="salesgraph">
+
+        <svg width="80%" height="1000" ><!--transform="matrix(0 0 0 -1 -1 -1)"-->
+            <defs>
+                <linearGradient id="gradient1" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+                </linearGradient>
+            </defs>
+            <line x1="40" y1="800" x2="1200" y2="800" stroke="black" stroke-width="2"></line>
+            <line x1="40" y1="0" x2="40" y2="800" stroke="black" stroke-width="2"></line>
+
+            <line x1="40" y1="200" x2="1200" y2="200" stroke="black" stroke-width="0.5" stroke-dasharray="10,5"></line>
+            <line x1="40" y1="400" x2="1200" y2="400" stroke="black" stroke-width="0.5" stroke-dasharray="10,5"></line>
+            <line x1="40" y1="600" x2="1200" y2="600" stroke="black" stroke-width="0.5" stroke-dasharray="10,5"></line>
+            <line x1="40" y1="800" x2="1200" y2="800" stroke="black" stroke-width="0.5" stroke-dasharray="10,5"></line>
+
+            <!--<rect class="bar" x="-90" y="0" height="170" width="20" fill="red" transform="translate(0, 800), rotate(180)"></rect>-->
+            <rect class="bar" x="70" y="-800" height="170" width="20" fill="blue" transform="scale(1,-1)"></rect>
+            <rect class="bar" x="120" y="-800" height="320" width="20" fill="blue" transform="scale(1,-1)"></rect>
+            <rect class="bar" x="170" y="-800" height="432" width="20" fill="blue" transform="scale(1,-1)"></rect>
+            <rect class="bar" x="220" y="-800" height="548" width="20" fill="blue" transform="scale(1,-1)"></rect>
+            <rect class="bar" x="270" y="-800" height="342" width="20" fill="blue" transform="scale(1,-1)"></rect>
+            <rect class="bar" x="320" y="-800" height="0" width="20" fill="url(#gradient1)" transform="scale(1,-1)">
+                <animate attributeName="height" to="689" fill="freeze"
+                          dur="5" /> 
+            </rect>
+            <rect class="bar" x="370" y="-800" height="344" width="20" fill="blue" transform="scale(1,-1)"></rect>
+            <rect class="bar" x="420" y="-800" height="109" width="20" fill="blue" transform="scale(1,-1)"></rect>
+            <rect class="bar" x="470" y="-800" height="655" width="20" fill="blue" transform="scale(1,-1)"></rect>
+            <rect class="bar" x="520" y="-800" height="327" width="20" fill="blue" transform="scale(1,-1)"></rect>
+            <rect class="bar" x="570" y="-800" height="109" width="20" fill="blue" transform="scale(1,-1)"></rect>
+            <rect class="bar" x="620" y="-800" height="235" width="20" fill="blue" transform="scale(1,-1)"></rect>
+
+            <text x="73" y="850" fill="black">Jan</text>
+            <text x="123" y="850" fill="black">Feb</text>
+            <text x="173" y="850" fill="black">Mar</text>
+            <text x="223" y="850" fill="black">Apr</text>
+            <text x="273" y="850" fill="black">May</text>
+            <text x="323" y="850" fill="black">Jun</text>
+            <text x="373" y="850" fill="black">Jul</text>
+            <text x="423" y="850" fill="black">Aug</text>
+            <text x="473" y="850" fill="black">Sep</text>
+            <text x="523" y="850" fill="black">Oct</text>
+            <text x="573" y="850" fill="black">Nov</text>
+            <text x="623" y="850" fill="black">Dec</text>
+
+            <text x="70" y="625" fill="#888888">170</text> 
+            <text x="120" y="475" fill="#888888">320</text>
+            <text x="170" y="363" fill="#888888">432</text>
+            <text x="220" y="247" fill="#888888">548</text>
+            <text x="270" y="453" fill="#888888">342</text>
+            <text x="320" y="107" fill="#888888">689</text>
+            <text x="370" y="451" fill="#888888">344</text>
+            <text x="420" y="686" fill="#888888">109</text>
+            <text x="470" y="140" fill="#888888">655</text>
+            <text x="520" y="468" fill="#888888">327</text>
+            <text x="570" y="686" fill="#888888">109</text>
+            <text x="620" y="560" fill="#888888">235</text>
+
+        </svg>
+    </section>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", initializeVideoPlayerControls, false);
+        document.addEventListener("DOMContentLoaded", drawChart, false);
+
+    </script>
+
+</body>
+</html>

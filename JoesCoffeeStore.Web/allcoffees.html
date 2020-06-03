@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="en"> <!--xmlns="http://www.w3.org/1999/xhtml"-->
+<head>
+    <title>Joe's Coffee Store! | Our Coffee</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/Layout.css" type="text/css" />
+    <script src="scripts/dragAndDrop.js"></script>
+    <!--<script src="scripts/localstorage.js"></script>-->
+</head>
+
+<body>
+    <header>
+        <div class="d-f mt-4">
+            <div class="logodiv"><a class="headerlogo" href="index.html"><img src="images/logo.png" /></a></div>
+            <h1 id="headername" class="pry-color-a d-ib p3">Joe's Coffee Store</h1>
+        </div>
+        <input type="search" id="searchbox" placeholder="Search our store" class="p2 mt-4"/>
+    </header>
+
+    <nav class="backgroundgradient my-3">
+        <ul class="d-f p2 w-100">
+            <li><a class="navlink white-color active" href="index.html">Home</a></li>
+            <li><a class="navlink white-color" href="blog.html">Blog</a></li>
+            <li><a class="navlink white-color" href="coffee.html">Our coffees</a></li>
+            <li><a class="navlink white-color" href="accessories.html">Accessories</a></li>
+            <li><a class="navlink white-color" href="Gifts.html">Gifts</a></li>
+            <li><a class="navlink white-color" href="findus.html">Find us</a></li>
+            <li><a class="navlink white-color" href="checkout.html">Checkout</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="imagediv" class="d-f jc-sb">
+            <img src="images/coffeeheader.jpg" id="welcomeimage" alt="Picture of coffee beans and a white cup"/>
+            <img src="images/cotm.jpg" id="coffeeofthemonth" alt="Our coffee of the month is the ..."/>   
+        </section>
+
+        <section class="d-f jc-sb">
+            <div id="espressocoffee">
+            <h2 class="blockheader mt-4 my-3 text-center">Espresso <span class="pry-color">coffee beans</span></h2>
+
+            <article class="productarticlewide d-f card jc-se" id="coffee-1" data-price="10.00">
+                <img id="coffee1" class="productarticlewidethumbnail" src="Images/coffee/coffee1.jpg" />
+                <p><span class="productarticlewidename med-text pry-color mt-1">Coffee 1</span></p>
+                <div class="productarticlewidecontent m3">
+                    <p class="productarticlewidedescription med-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin iaculis vehicula nibh, at blandit turpis ultricies vel. Phasellus tristique, arcu vitae ullamcorper cursus, ipsum nisi rutrum augue, quis consectetur enim libero ac ante. </p>
+                    <p class="productarticlewideprice med-text pt-2 sec-color">€10</p>
+
+                </div>
+            </article>
+
+            <article class="productarticlewide d-f card jc-se" id="coffee-2" data-price="15.00">
+                <img id="coffee2" class="productarticlewidethumbnail" src="Images/coffee/coffee1.jpg" />
+                <p><span class="productarticlewidename med-text pry-color mt-1">Coffee 1</span></p>
+                <div class="productarticlewidecontent m3">
+                    <p class="productarticlewidedescription med-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin iaculis vehicula nibh, at blandit turpis ultricies vel. Phasellus tristique, arcu vitae ullamcorper cursus, ipsum nisi rutrum augue, quis consectetur enim libero ac ante. </p>
+                    <p class="productarticlewideprice med-text pt-2 sec-color">€15</p>
+                    
+                </div>
+            </article>
+
+            <article class="productarticlewide d-f card jc-se" id="coffee3" data-price="12.00">
+                <img id="coffee3" class="productarticlewidethumbnail" src="Images/coffee/coffee1.jpg" />
+                <p><span class="productarticlewidename med-text pry-color mt-1">Coffee 1</span></p>
+                <div class="productarticlewidecontent m3">
+                    <p class="productarticlewidedescription med-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin iaculis vehicula nibh, at blandit turpis ultricies vel. Phasellus tristique, arcu vitae ullamcorper cursus, ipsum nisi rutrum augue, quis consectetur enim libero ac ante. </p>
+                    <p class="productarticlewideprice med-text pt-2 sec-color">€12</p>
+
+                </div>
+            </article>
+
+            <article class="productarticlewide d-f card jc-se" id="coffee-4" data-price="10.00">
+                <img id="coffee4" class="productarticlewidethumbnail" src="Images/coffee/coffee1.jpg" />
+                <p><span class="productarticlewidename med-text pry-color mt-1">Coffee 1</span></p>
+                <div class="productarticlewidecontent m3">
+                    <p class="productarticlewidedescription med-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin iaculis vehicula nibh, at blandit turpis ultricies vel. Phasellus tristique, arcu vitae ullamcorper cursus, ipsum nisi rutrum augue, quis consectetur enim libero ac ante. </p>
+                    <p class="productarticlewideprice med-text pt-2 sec-color">€10</p>
+                    
+                </div>
+            </article>
+            </div>
+        
+            <article id="shoppingcart" class="pt-5">
+                <p class="blockheader " id="cart">Shopping cart</p>
+                <ul id="cartitems" class="my-4"</ul>
+            </article>
+        </section>
+    </main>
+   
+
+    <script>
+        document.addEventListener("DOMContentLoaded", addDnDHandlers, false);
+    </script>
+
+</body>
+</html>
